@@ -14,21 +14,26 @@ struct Part
 };
 const int SIZE = 4;
 // Prototypes
-
+void PartInput(Part pi[SIZE]);
 // Main Program Program
 int main(void)
 {
     Part p[SIZE];
-    for (int i = 0; i < SIZE; i++)
-    {
-        cout << "Enter model number: ";
-        cin >> p[i].modelNumber;
-        cout << "Enter part number: ";
-        cin >> p[i].partNumber;
-        cout << "Enter part cost: ";
-        cin >> p[i].cost;
-        cout << endl;
-    }
+    PartInput(p);  // Take part input
+
     return 0;
 }
 // Function Definitions
+void PartInput(Part pi[SIZE])
+{
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << "Enter model number: ";
+        cin >> pi[i].modelNumber;
+        cout << "Enter part number: ";
+        cin >> pi[i].partNumber;
+        cout << "Enter part cost: ";
+        cin >> pi[i].cost;
+        cout << endl;
+    }
+}
